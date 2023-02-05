@@ -13,10 +13,10 @@ name: "CodeQL"
 
 on:
   push:
-    
+   branches: ["**"] 
   pull_request:
     # The branches below must be a subset of the branches above
-  
+   branches: ["**"]
   
 
 jobs:
@@ -56,8 +56,8 @@ jobs:
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild java code
-      uses: javac HelloWorld.java
+    - name: Building application
+      run: javac HelloWorld.java
       
 
     # ℹ️ Command-line programs to run using the OS shell.
